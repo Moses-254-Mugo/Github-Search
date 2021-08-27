@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { UserRepoListComponent } from './user-repo-list/user-repo-list.component';
+import { UserDataComponent } from './user-data/user-data.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    UserRepoListComponent,
+    UserDataComponent
   ],
   imports: [
     BrowserModule,
