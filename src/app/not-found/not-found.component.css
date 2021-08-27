@@ -1,3 +1,9 @@
-.container{
-    color: #fff;
+#error404{
+background: url('../../assets/images/404-error-page-not-found.jpg') no-repeat;
+background-position: center;
+background-size: cover;
+height: 700px;
+padding: 20px;
+
+    
 }
