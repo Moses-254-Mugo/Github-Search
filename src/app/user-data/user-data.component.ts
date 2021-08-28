@@ -15,7 +15,7 @@ export class UserDataComponent implements OnInit {
 
   getUser(searchTerm:any){
     this.user_service.getUser(searchTerm).subscribe((data) => {
-      this.myUser = data;
+      this.myUser.push(data);
       console.log(this.myUser)
       
     });

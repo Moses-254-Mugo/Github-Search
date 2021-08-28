@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Repo } from '../repo';
+import { RepoServiceService } from '../repo-service.service';
 
 @Component({
   selector: 'app-user-repo-list',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserRepoListComponent implements OnInit {
 
-  constructor() { }
+ 
+  myRepo: Repo[] = []; 
 
-  ngOnInit(): void {
+  constructor(public repo_service:RepoServiceService ) { }
+
+  getRepo(searchTerm:any){
+    this.repo_service.getRepo(searchTerm).subscribe((data) => {
+      this.myRepo=data;
+      console.log(this.myRepo)
+      
+    });
   }
+
+  ngOnInit(){
+    this.getRepo("Moses-254-Mugo")
+  }
+
 
 }

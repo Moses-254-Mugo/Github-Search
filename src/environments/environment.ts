@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  accessToken:'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',
+  accessToken:'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',
 
 };
 
