@@ -1,33 +1,38 @@
-<div class="container">
+<div class="container ">
     <app-search-bar (userEmitter)='getRepo($event)'></app-search-bar>
-</div>
-
-
-
-
-<!-- <div class="container">
-  <app-search-bar (userEmitter)='getRepo($event)'></app-search-bar>
     <div class="row">
-        <div class="col-sm-6">
-            <h2>REPOSITORIES FOUND </h2>
+        <div class="col-sm-4">
+            <h2 class="text-center">REPOSITORIES FOUND </h2>
             <hr>
-              <div class="card" *ngFor="let repo of myRepo">
-                <div class="card">
-                  <div class="card-header text-center"><h2 id="rname">{{repo.name}}</h2></div>
-                  <div class="card-body">
-                    <p id="rdesc">4</p>
-                    <p id="rlang"></p>
+            <div class="container card-columns">
+                <div class="card" *ngFor="let repo of myRepo">
+                  <div class="card">
+                    <div class="card-header text-center"><h2 id="rname">{{repo.name}}</h2></div>
+                    <div class="card-body">
+                      <p id="rdesc"></p>
+                      <p id="rlang"></p>
+                    </div>
+                    <div class="card-footer flex-footer">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <a href="#"><i class="fas fa-code-branch"></i></a>
+                                
+                            </div>
+                            <div class="col-sm-4">
+                                <a href="#"><i class="fas fa-eye"></i></a>
+                            </div>
+                            <div class="col-sm-4">
+                                <a href="#"><i class="fal fa-code-branch"></i></a>
+                            </div>
+                        </div>
+                      
+                    </div>
                   </div>
-                  <div class="card-footer flex-footer">
-                    <p id="rwatchers" class="text-center">Watchers <span class="data">3</span></p>
-                    <p id="rforks" class="text-center">Forks <span class="data">2</span></p>
-                    <p id="rbranch" class="text-center">Branch <span class="data">1 </span></p>
-                  </div>
-              </div>
-
+                </div>
         </div>
     </div>
-</div> -->
+</div>
+
 
 
 
