@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { User } from './user';
-import { Observable, observable } from 'rxjs';
+import { Observable} from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
@@ -9,12 +10,14 @@ import { Observable, observable } from 'rxjs';
 })
 export class UserServiceService {
   _URL = 'https://api.github.com/users/';
+  
 
-  token = '?access_token=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';
-  constructor(public http: HttpClient) {
+  token = `?access_token=${environment.accessToken}`;
+  
 
-   }
-   getRepositories(searchTerm: string): Observable<any>{
+  constructor(public http: HttpClient) {}
+
+   getUser(searchTerm: string): Observable<any>{
      return this.http.get(this._URL + searchTerm + this.token);
    }
 }

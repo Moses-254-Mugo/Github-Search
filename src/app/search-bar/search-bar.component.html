@@ -2,8 +2,8 @@
     <br>
     <form>
         <div class="input-group mb-2">
-            <input type="text" class="form-control rounded" placeholder="Search here..." aria-label="Search" aria-describedby="search-addon"/>
-            <button type="submit" class="bent btn-success ">Search</button>
+            <input type="text" class="form-control rounded" placeholder="Search here..." aria-label="Search"[(ngModel)]="searchTerm" name="searchTerm" aria-describedby="search-addon"/>
+            <button type="submit" (click)='sendUser()' class="bent btn-success ">Search</button>
         </div>
     </form>
     

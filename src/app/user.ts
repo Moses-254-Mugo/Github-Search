@@ -1,11 +1,17 @@
 export class User {
-    public login: any;
-    public avatar_url: any;
-    public followers: any;
-    public following: any;
-    public repo: any;
-    public name: any;
-    public location: any;
+     login : string;
+     avatar_url : string;
+     followers : number;
+     following : number;
+     bio : string;
+
+     constructor(login: string, avatar_url: string, followers: number, following: number, bio : string){
+         this.login =login;
+         this.avatar_url = avatar_url;
+         this.followers = followers;
+         this.following = following;
+         this.bio = bio;
+     }
 
 
 }
