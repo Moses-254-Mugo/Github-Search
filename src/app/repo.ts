@@ -6,11 +6,11 @@ export class Repo {
         language: string;
         watchers:string;
         forks: string;
-        default_branch: string;
+        html_url: string;
 
 
    
-        constructor(avatar_url: string, name: string, description: string,language: string, watchers:string,forks: string, default_branch: string){
+        constructor(avatar_url: string, name: string, description: string,language: string, watchers:string,forks: string, html_url: string){
     
             this.avatar_url = avatar_url;
             this.name = name;
@@ -18,7 +18,7 @@ export class Repo {
             this.language = language;
             this.watchers = watchers;
             this.forks = forks;
-            this.default_branch = default_branch;
+            this.html_url = html_url;
     
     
         }

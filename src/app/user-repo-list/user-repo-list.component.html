@@ -9,20 +9,20 @@
                   <div class="card">
                     <div class="card-header text-center"><h2 id="rname">{{repo.name}}</h2></div>
                     <div class="card-body">
-                      <p id="rdesc">{{repo.description}}</p>
-                      <p id="rlang"></p>
+                      <p id="rdesc" class="text-center">{{repo.description}}</p>
+                      <p id="rlang" class="text-center">{{repo.language}}</p>
                     </div>
                     <div class="card-footer flex-footer">
                         <div class="row">
                             <div class="col-sm-4">
-                                <a href="#"><i class="fas fa-code-branch"></i></a>
+                                <a href="#" class="btn btn-outline-secondary"><i class="fas fa-code-branch">{{repo.forks}}</i></a>
                                 
                             </div>
                             <div class="col-sm-4">
-                                <a href="#"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="btn btn-outline-secondary"><i class="fas fa-eye"></i>{{repo.watchers}}</a>
                             </div>
                             <div class="col-sm-4">
-                                <a href="#"><i class="fal fa-code-branch"></i></a>
+                                <a href="{{repo.html_url}}" class="btn btn-outline-secondary">View</a>
                             </div>
                         </div>
                       
