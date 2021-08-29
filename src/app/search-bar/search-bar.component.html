@@ -2,7 +2,7 @@
     <br>
     <form>
         <div class="input-group mb-2">
-            <input type="text" class="form-control rounded" placeholder="Search here..." aria-label="Search"[(ngModel)]="searchTerm" name="searchTerm" aria-describedby="search-addon"/>
+            <input type="text" class="form-control rounded" placeholder="Search here..." aria-label="Search"[(ngModel)]="searchTerm" (keyup)= 'sendUser()' name="searchTerm" aria-describedby="search-addon"/>
             <button type="submit" (click)='sendUser()' class="bent btn-success ">Search</button>
         </div>
     </form>
