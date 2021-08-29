@@ -1,15 +1,15 @@
 <div class="container ">
     <app-search-bar (userEmitter)='getRepo($event)'></app-search-bar>
     <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-8">
             <h2 class="text-center">REPOSITORIES FOUND </h2>
             <hr>
             <div class="container card-columns">
-                <div class="card" *ngFor="let repo of myRepo">
+                <div class="card mb-3" *ngFor="let repo of myRepo">
                   <div class="card">
                     <div class="card-header text-center"><h2 id="rname">{{repo.name}}</h2></div>
                     <div class="card-body">
-                      <p id="rdesc"></p>
+                      <p id="rdesc">{{repo.description}}</p>
                       <p id="rlang"></p>
                     </div>
                     <div class="card-footer flex-footer">
@@ -29,6 +29,9 @@
                     </div>
                   </div>
                 </div>
+        </div>
+        <div class="col-sm-4">
+        
         </div>
     </div>
 </div>
