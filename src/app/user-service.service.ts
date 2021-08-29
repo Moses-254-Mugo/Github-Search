@@ -13,6 +13,7 @@ export class UserServiceService {
   
 
   token = `?access_token=${environment.accessToken}`;
+
   
 
   constructor(public http: HttpClient) {}
