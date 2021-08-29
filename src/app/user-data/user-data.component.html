@@ -1,33 +1,32 @@
 <div class="container">
-  <!-- <app-search-bar [myUser]="myU></app-search-bar> -->
 <app-search-bar (userEmitter)='getUser($event)' ></app-search-bar>
 
 <div>
 </div>
     <h2 class="text-center"> User</h2>
-    <h5>User name {{myUser[0].bio}}</h5>
+    
     <hr>
     <div class="row">
         <div class="col-sm-6">
             <div class="card" style="width: 18rem;">
                 <img src="{{myUser[0].avatar_url}}" class="card-img-top" alt="...">
+                <h5>User name {{myUser[0].bio}}</h5>
                 <div class="card-body">
                  
                   
                   <div class="row">
                     <div class="col-sm-6">
-                      <p class="card-text"><i class="fa fa-user-plus" aria-hidden="true"></i><small>FOLLOWING</small></p>
+                      <p class="card-text" class="btn btn-outline-secondary">{{myUser[0].following}}<small>FOLLOWING</small></p>
                     </div>
                     <div class="col-sm-6">
-                      <p></p>
-                      <p class="card-text"><small>FOLLOWER</small></p>
+                      <p class="card-text" class="btn btn-outline-secondary">{{myUser[0].followers}}}<small>FOLLOWER</small></p>
                     </div>
                   </div>
-                
-                   <p>School</p>
-                  <p>Moringa School</p>
-                  <p>Nairob, Kenya</p>
-                  <p>Twitter</p>
+                  <hr>
+                  <p class="card-text" ><i class="fas fa-building"></i>Company</p>
+                  <p class="card-text" ><i class="fas fa-map-marker-alt"></i>{{myUser[0].location}}</p>
+                  <p class="card-text" ><i class="far fa-calendar-alt"></i>Joint on:{{myUser[0].created_at}}</p>
+                  <hr>
                   
                 </div>
               </div>
