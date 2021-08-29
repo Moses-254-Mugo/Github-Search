@@ -12,8 +12,8 @@ export class UserServiceService {
   _URL = 'https://api.github.com/users/';
   
 
-  // token = `?access_token=${environment.accessToken}`;
-  token=`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`;
+  token = `?access_token=${environment.accessToken}`;
+  // token=`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`;
 
   
 
